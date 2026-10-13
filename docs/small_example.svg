@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="930" font-family="monospace" font-size="12">
+<rect width="100%" height="100%" fill="white"/>
+<g fill="#1f77b4" fill-opacity="0.45">
+<rect x="19.9195" y="753.32" width="724.346" height="36.2173"/>
+<rect x="19.9195" y="662.777" width="724.346" height="36.2173"/>
+<rect x="19.9195" y="510.664" width="724.346" height="25.3521"/>
+<rect x="19.9195" y="300.604" width="325.956" height="36.2173"/>
+<rect x="378.471" y="300.604" width="365.795" height="36.2173"/>
+<rect x="19.9195" y="101.408" width="181.087" height="36.2173"/>
+<rect x="246.278" y="19.9195" width="181.087" height="36.2173"/>
+<rect x="472.636" y="101.408" width="181.087" height="36.2173"/>
+<rect x="653.722" y="28.9738" width="90.5433" height="108.652"/>
+</g>
+<g fill="#ff7f0e" fill-opacity="0.45">
+<rect x="201.006" y="572.233" width="36.2173" height="307.847"/>
+<rect x="563.179" y="572.233" width="36.2173" height="307.847"/>
+</g>
+<g fill="#2ca02c" fill-opacity="0.45">
+<rect x="210.06" y="762.374" width="18.1087" height="18.1087"/>
+<rect x="575.855" y="762.374" width="18.1087" height="18.1087"/>
+</g>
+<g fill="none" stroke="red" stroke-width="2">
+<rect x="16.9195" y="507.664" width="730.346" height="31.3521"><title>width</title></rect>
+<rect x="342.875" y="297.604" width="38.5956" height="42.2173"><title>spacing</title></rect>
+<rect x="572.855" y="759.374" width="24.1087" height="24.1087"><title>enclosure</title></rect>
+</g>
+<rect x="8" y="910" width="12" height="12" fill="#1f77b4" fill-opacity="0.45"/><text x="24" y="921">M1</text>
+<rect x="78" y="910" width="12" height="12" fill="#ff7f0e" fill-opacity="0.45"/><text x="94" y="921">M2</text>
+<rect x="148" y="910" width="12" height="12" fill="#2ca02c" fill-opacity="0.45"/><text x="164" y="921">V1</text>
+<rect x="218" y="910" width="12" height="12" fill="none" stroke="red" stroke-width="2"/><text x="234" y="921">violation</text>
+</svg>

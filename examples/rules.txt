@@ -1,0 +1,7 @@
+# Rule deck for the generated layouts (database units ~ nm).
+width     M1 20      # every M1 shape at least 20 wide
+width     M2 20
+spacing   M1 30      # unconnected M1 shapes at least 30 apart (Euclidean)
+spacing   M2 30
+enclosure V1 M1 5    # each via inside one M1 shape with >= 5 margin on all sides
+enclosure V1 M2 5

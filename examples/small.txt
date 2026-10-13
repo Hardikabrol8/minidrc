@@ -1,0 +1,28 @@
+# A hand-made layout with exactly one violation of each kind, plus near-misses.
+# Rules: examples/rules.txt  (width 20, spacing 30, enclosure 5)
+
+# Two clean parallel M1 wires, exactly 30 apart: legal (rule is "at least 30").
+M1    0    0  400   20
+M1    0   50  400   70
+
+# Width violation: a 14-wide wire.
+M1    0  140  400  154
+
+# Spacing violation: end-to-end gap of 18 on the same track.
+M1    0  250  180  270
+M1  198  250  400  270
+
+# Corner-to-corner: dx = 25, dy = 25 -> Euclidean distance 35.4 >= 30: legal,
+# even though both projections are closer than 30.
+M1    0  360  100  380
+M1  125  405  225  425
+
+# Touching shapes are one polygon, never a spacing violation.
+M1  250  360  350  380
+M1  350  360  400  420
+
+# A vertical M2 wire crossing the first M1 wire, with two vias.
+M2  100  -50  120  120
+V1  105    5  115   15     # centred: margin 5 on every side in both metals -> legal
+M2  300  -50  320  120
+V1  307    5  317   15     # shifted right by 2: M2 margin only 3 -> enclosure violation
