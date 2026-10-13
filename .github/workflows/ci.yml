@@ -1,0 +1,18 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS_RELEASE="-O3"
+      - name: Build
+        run: cmake --build build -j
+      - name: Test
+        run: ctest --test-dir build --output-on-failure
+      - name: Smoke-run the CLI
+        run: |
+          ./build/minidrc check examples/small.txt examples/rules.txt || test $? -eq 2
+          ./build/minidrc gen --rects 200000 --seed 3 --out build/layout.txt
+          ./build/minidrc bench build/layout.txt examples/rules.txt
