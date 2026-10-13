@@ -1,5 +1,7 @@
 # minidrc — a layout design-rule checker in C++
 
+[![ci](https://github.com/Hardikabrol8/minidrc/actions/workflows/ci.yml/badge.svg)](https://github.com/Hardikabrol8/minidrc/actions/workflows/ci.yml)
+
 A small physical-verification tool. It reads a chip layout (axis-aligned rectangles on named layers) and a rule deck, then reports every **minimum width**, **minimum spacing** and **via enclosure** violation. It can draw any violation as an SVG picture.
 
 Comparing every pair of shapes is O(n²). minidrc's grid and sweep-line algorithms check a 4.1-million-shape layout in about 1.3 seconds on one core, where the all-pairs version would take an estimated two hours. All three algorithms are verified to report identical violations.
